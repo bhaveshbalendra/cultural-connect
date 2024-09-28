@@ -41,13 +41,14 @@ const Signup: React.FC = () => {
       });
 
       if (res.data.success) {
-        navigate("/login");
+        console.log(res.data.message);
         toast.success(res.data.message);
         setInput({
           username: "",
           email: "",
           password: "",
         });
+        navigate("/login");
       }
     } catch (error: any) {
       console.log(error);

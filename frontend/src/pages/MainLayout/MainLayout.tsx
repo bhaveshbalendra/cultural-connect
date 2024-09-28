@@ -1,7 +1,15 @@
-import React from "react";
+import LeftSideBar from "@/components/LeftSideBar";
+import Home from "../Home/Home";
 
 function MainLayout() {
-  return <div>MainLayout</div>;
+  return (
+    <div>
+      <LeftSideBar />
+      <div>
+        <Home />
+      </div>
+    </div>
+  );
 }
 
 export default MainLayout;
