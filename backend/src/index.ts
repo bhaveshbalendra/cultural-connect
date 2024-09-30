@@ -4,6 +4,7 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import userRouter from "./routes/user";
 import mongoose from "mongoose";
+import postRoute from "./routes/post";
 
 // Load environment variables
 dotenv.config();
@@ -38,6 +39,7 @@ app.use(cors(corsOptions));
 
 // Route configuration
 app.use("/", userRouter);
+app.use("/post", postRoute);
 
 // Start the server
 app.listen(PORT, () => {

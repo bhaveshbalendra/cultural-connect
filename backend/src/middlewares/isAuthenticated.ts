@@ -16,6 +16,7 @@ const isAuthenticated = async (
 ) => {
   try {
     const token = req.cookies?.token;
+
     if (!token) {
       return res
         .status(401)
